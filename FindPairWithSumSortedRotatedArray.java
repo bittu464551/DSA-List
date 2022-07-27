@@ -1,6 +1,10 @@
 package Array;
 import java.util.ArrayList;
 import java.util.Scanner;
+/*
+Input: [11, 15, 26, 38, 9, 10] 35
+Output: true
+*/
 public class FindPairWithSumSortedRotatedArray {
     public boolean pairWithSum(int arr[],int num){
         int n=arr.length;
