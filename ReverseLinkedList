@@ -1,0 +1,11 @@
+public ListNode reverseList(ListNode head) {
+        ListNode curr=head;
+        ListNode strat=null;
+        while(curr!=null){
+            ListNode temp=curr.next;
+            curr.next=strat;
+            strat=curr;
+            curr=temp;
+        }
+        return strat;
+    }
