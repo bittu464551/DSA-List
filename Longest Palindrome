@@ -1,0 +1,19 @@
+/*
+Input: s = "abccccdd"
+Output: 7
+Explanation: One longest palindrome that can be built is "dccaccd", whose length is 7.
+*/
+public int longestPalindrome(String s) {
+        HashSet<Character> hashSet=new HashSet();
+        int result=0;
+        for(char c: s.toCharArray()){
+            if(hashSet.contains(c)){
+                result+=2;
+                hashSet.remove(c);
+            }
+            else{
+                hashSet.add(c);
+            }
+        }
+        return hashSet.size()>0?result+1:result;
+    }
