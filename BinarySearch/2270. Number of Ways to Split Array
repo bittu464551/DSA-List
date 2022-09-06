@@ -1,0 +1,17 @@
+class Solution {
+    public int waysToSplitArray(int[] nums) {
+        int ans=0;
+        long sum=0;
+        long spilt_sum=0;
+        for(int i=0;i<nums.length;i++){
+             sum+=nums[i];  
+        }
+        for(int i=0;i<nums.length-1;i++){
+            spilt_sum+=nums[i];
+            if(spilt_sum>=sum-spilt_sum){
+                ans++;
+            }
+        }
+        return ans;
+    }
+}
