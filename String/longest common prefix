@@ -1,0 +1,18 @@
+#Given a array of N strings, find the longest common prefix among all strings present in the array.
+#https://practice.geeksforgeeks.org/problems/longest-common-prefix-in-an-array5129/1
+
+class Solution:
+    def longestCommonPrefix(self, arr, n):
+        ret = ''
+        # code here
+        for i in zip(*arr):
+            if len(set(i)) == 1:
+                ret += i[0] 
+            else : 
+                break 
+        return ret if ret else "-1"
+      
+      
+
+#zip function return this
+#zip(*arr)=>(('g', 'g', 'g', 'g'), ('e', 'e', 'e', 'e'), ('e', 'e', 'e', 'e'), ('k', 'k', 'k', 'z'), ('s', 's', 's', 'e'), ('f', 's', 's', 'r'))
