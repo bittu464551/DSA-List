@@ -1,0 +1,11 @@
+#Given a String S, reverse the string without reversing its individual words. Words are separated by dots.
+#https://practice.geeksforgeeks.org/problems/reverse-words-in-a-given-string5459/1
+class Solution:
+    
+    #Function to reverse words in a given string.
+    def reverseWords(self, s):
+        # code here
+        li = s.split('.')
+        n = li[::-1]
+        res='.'.join(n)
+        return res
